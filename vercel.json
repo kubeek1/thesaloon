@@ -1,0 +1,30 @@
+{
+  "builds": [
+    {
+      "src": "/api/app.js",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["api/**"] }
+    },
+    {
+      "src": "saloon/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
+      }
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/app.js"
+    },
+    {
+      "source": "/static/(.*)",
+      "destination": "/saloon/static/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/saloon/index.html"
+    }
+  ]
+}

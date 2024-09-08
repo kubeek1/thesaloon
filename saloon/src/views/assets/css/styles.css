@@ -1,0 +1,171 @@
+body {
+    padding-top: 90px;
+}
+
+table {
+    text-align: center;
+}
+
+div .main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+}
+
+#forms {
+    margin: 3%;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    margin-right: 2.3rem;
+}
+
+.nav-link {
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    transition: transform 0.2s;
+    transform: scale(1.03);
+}
+
+input[type="text"], input[type="password"], input[type="number"]{
+    border: 0;
+    border-bottom: 1px solid lightgrey !important;
+    border-radius: 2px !important;
+    outline: 0;
+}
+
+.form-control:focus {
+    border: 0;
+    box-shadow: none !important;
+}
+
+.rs-picker-subtle .rs-picker-toggle {
+    z-index: 0 !important;
+    padding-left: 10px;
+}
+
+.rs-picker-daterange .rs-picker-toggle {
+    padding-left: 8px;
+}
+
+[class*="-control"]:hover {
+    background-color: #f7f7fa;
+}
+
+.rs-picker-toggle-value {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.bi-wrench, .bi-person-plus-fill, .bi-truck, .bi-bookmark-check {
+    font-size: 125px;
+    padding: 20px;
+}
+
+.bi-box-arrow-in-right {
+    font-size: 20px;
+    align-content: center;
+    padding-left: 0.3em;
+}
+
+.rs-picker-toggle-value {
+    color: hsl(0,0%,50%) !important;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+    color: #fff !important;
+    background-color: #343a40 !important;
+}
+
+.nav-link, .nav-link:focus, .nav-link:hover, .nav-link:active {
+    color: rgba(255,255,255,.5) !important;
+}
+
+.nav-link:hover {
+    color: #ddd !important;
+}
+
+.dropdown-menu {
+    font-size: 0.9rem;
+}
+
+th.filter-head {
+    border: 0 !important;
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+.rs-picker-disabled {
+    opacity: 0.6 !important;
+}
+
+.rs-picker-disabled .rs-picker-toggle-value, .rs-picker-toggle-caret{
+    color: black !important;
+}
+
+button:focus, a.btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.tableCaption {
+    padding-bottom: 5em;
+    border: 0 !important;
+    font-size: 25px;
+}
+
+.actbtn {
+    margin-left: 12px;
+}
+
+button:disabled {
+    pointer-events: none;
+}
+
+.btn:disabled {
+    opacity: 0.2;
+}
+
+.feedTable .tableCaption {
+    font-size: 16px;
+}
+
+.feedTable {
+    font-size: 0.9em;
+}
+
+.fade-in, .container, .loaderContainer, table {
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-timing-function: ease-in;
+    animation-duration: 300ms;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.table-hover tbody tr:hover {
+    background-color: #EEEEFF;
+}
+
+tr.inactive {
+    background-color: #FF9999;
+    opacity: 0.8;
+    color: black;
+}
+
+tr.inactive:hover {
+    background-color: #FF5555 !important;
+    opacity: 0.8;
+    color: black;
+}
