@@ -67,10 +67,9 @@ export default class CustomersForm extends React.Component {
                     <div className="row form-group justify-content-center">
                         <label className="col-lg-1 control-label col-form-label" htmlFor="email">Mail</label>
                         <div className="col-lg-3">
-                            <input type="text"
+                            <input type="email"
                                    id="email"
                                    required="required"
-                                   pattern={"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"}
                                    value={this.state.email}
                                    onChange={this.handleInputChange}
                                    className="form-control"/>

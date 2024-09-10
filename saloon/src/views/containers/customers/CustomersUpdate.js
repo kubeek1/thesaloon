@@ -48,10 +48,15 @@ export default class CustomersUpdate extends React.Component {
         scrollToBottom();
     };
 
-    handleSubmit = data => {
-        updateCustomer(this.props.match.params.id, data);
-        history.push('/customers');
-        history.go(0);
+    handleSubmit = async (data) => {
+        try {
+            await updateCustomer(this.props.match.params.id, data);
+            history.push('/customers');
+            history.go(0);
+        } catch(e) {
+            console.error("Update failed", e);
+        }
+
     };
 
     render() {

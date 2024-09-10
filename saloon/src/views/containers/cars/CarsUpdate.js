@@ -30,31 +30,26 @@ export default class CarsUpdate extends React.Component {
 
     componentDidUpdate(prevProps) {
         if(prevProps.match.params.id !== this.props.match.params.id){
-            this.setState({
-                loading: true
-            }, () => {
-                fetchCar(this.props.match.params.id)
-                    .then((data) => {
-                        if(data){
-                            this.setState({
-                                car: data,
-                                loading: false
-                            });
-                        }
-                    })
-                    .catch((e) => {
-                        console.error('Error', e);
+            fetchCar(this.props.match.params.id)
+            .then((data) => {
+                if(data){
+                    this.setState({
+                        car: data
                     });
+                } else toast.error("Nie udało się połączyć z bazą danych");
             })
-
         }
         scrollToBottom();
     };
 
-    handleSubmit = data => {
-        updateCar(this.props.match.params.id, data);
-        history.push('/cars');
-        history.go(0);
+    handleSubmit = async (data) => {
+        try {
+            await updateCar(this.props.match.params.id, data)
+            history.push('/cars');
+            history.go(0);
+        } catch (e) {
+            console.error("Update failed", e);
+        }
     };
 
 

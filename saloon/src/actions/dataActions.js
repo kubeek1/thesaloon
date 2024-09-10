@@ -32,7 +32,7 @@ export function createReservation(data) {
             'Content-Type': 'application/json'
         }
     })
-    .then(r => r)
+    .then(r => r.json())
     .catch(e => console.error(e));
 }
 
@@ -44,7 +44,7 @@ export function updateReservation(id, data) {
             'Content-Type': 'application/json'
         }
     })
-    .then(r => r)
+    .then(r => r.json())
     .catch(e => console.error(e));
 
 }
@@ -53,7 +53,7 @@ export function deleteReservation(id) {
     return fetch(BASE_URL + 'reservations/delete/' + id, {
         method: 'DELETE'
     })
-    .then(r => r)
+    .then(r => r.json())
     .catch(e => console.error(e));
 }
 
@@ -79,7 +79,7 @@ export function createCustomer(data) {
             'Content-Type': 'application/json'
         }
     })
-    .then(r => r)
+    .then(r => r.json())
     .catch(e => console.error(e));
 }
 
@@ -91,7 +91,7 @@ export function updateCustomer(id, data) {
             'Content-Type': 'application/json'
         }
     })
-    .then(r => r)
+    .then(r => r.json())
     .catch(e => console.error(e));
 }
 
@@ -99,7 +99,7 @@ export function deleteCustomer(id) {
     return fetch(BASE_URL + 'customers/delete/' + id, {
         method: 'DELETE'
     })
-    .then(r => r)
+    .then(r => r.json())
     .catch(e => console.error(e));
 }
 
@@ -136,7 +136,7 @@ export function createCar(data) {
              'Content-Type': 'application/json'
          }
      })
-     .then(r => r)
+     .then(r => r.json())
      .catch(e => console.error(e));
  }
 
@@ -148,7 +148,7 @@ export function updateCar(id, data) {
             'Content-Type': 'application/json'
         }
     })
-    .then(r => r)
+    .then(r => r.json())
     .catch(e => console.error(e));
 }
 
@@ -156,7 +156,7 @@ export function deleteCar(id) {
     return fetch(BASE_URL + 'cars/delete/' + id, {
         method: 'DELETE',
     })
-    .then(r => r)
+    .then(r => r.json())
     .catch(e => console.error(e));
 }
 
@@ -181,7 +181,7 @@ export function createIncident(data) {
              'Content-Type': 'application/json'
          }
      })
-     .then(r => r)
+     .then(r => r.json())
      .catch(e => console.error(e));
  }
 
@@ -193,7 +193,7 @@ export function updateIncident(id, data) {
             'Content-Type': 'application/json'
         }
     })
-    .then(r => r)
+    .then(r => r.json())
     .catch(e => console.error(e));
 }
 
@@ -201,7 +201,7 @@ export function deleteIncident(id) {
     return fetch(BASE_URL + 'incidents/delete/' + id, {
         method: 'DELETE'
     })
-    .then(r => r)
+    .then(r => r.json())
     .catch(e => console.error(e));
 }
 
@@ -218,7 +218,7 @@ export function authUser(l, pw) {
                     password: pw
         })
     })
-    .then(r => r)
+    .then(r => r.json())
     .catch(e => console.error(e));
 }
 

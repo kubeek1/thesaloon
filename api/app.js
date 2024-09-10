@@ -24,7 +24,7 @@ let app = express();
 let corsOptions = {
   origin: ['http://localhost:3000', 'https://thesaloon.vercel.app'],
   optionsSuccessStatus: 200,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true
 }
 app.use(cors(corsOptions));

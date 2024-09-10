@@ -50,15 +50,14 @@ export default class ReservationsUpdate extends React.Component {
         scrollToBottom();
     };
 
-    handleSubmit = data => {
-    this.setState({ loading: true });
-            updateReservation(this.props.match.params.id, data).then(() => {
-                setTimeout( () => {
-                    this.setState({ loading: false });
-                    history.push('/reservations');
-                    history.go(0);
-                }, 3000)
-            });
+    handleSubmit = async (data) => {
+        try {
+            await updateReservation(this.props.match.params.id, data);
+            history.push('/reservations');
+            history.go(0);
+        } catch (e) {
+            console.error("Update failed", e);
+        }
     };
 
     render() {

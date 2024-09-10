@@ -50,10 +50,14 @@ export default class IncidentsUpdate extends React.Component {
         scrollToBottom();
     };
 
-    handleSubmit = data => {
-        updateIncident(this.props.match.params.id, data);
-        history.push('/incidents');
-        history.go(0);
+    handleSubmit = async (data) => {
+        try {
+            await updateIncident(this.props.match.params.id, data);
+            history.push('/incidents');
+            history.go(0);
+        } catch(e) {
+            console.error("Update failed", e);
+        }
     };
 
     render() {
